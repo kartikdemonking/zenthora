@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Release Tracker — Zenthora</title>
+  <link rel="stylesheet" href="../css/style.css">
+  
+</head>
+<body>
+  <header>
+    <div class="wrap brand">
+      <img src="../assets/logo.png" alt="Zenthora logo">
+      <div><h1>Release Tracker</h1><div class="tag">Zenthora • Dark</div></div>
+      <div class="actions" style="margin-left:auto"><a class="btn hollow" href="../index.html">← Back</a></div>
+    </div>
+  </header>
+  <div class="section">
+    
+  <div class="list" id="rel"></div>
+  <script>
+  const rel=[{date:"2025-09-01",title:"AOT — Final Special"},{date:"2025-10-12",title:"Demon Slayer S4 EP1"}];
+  document.getElementById('rel').innerHTML=rel.map(x=>'<div class="row"><b>'+x.date+'</b> — '+x.title+'</div>').join('');
+  </script>
+
+  </div>
+  <div class="footer">© 2025 Zenthora</div>
+</body>
+</html>

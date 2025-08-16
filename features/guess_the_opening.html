@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Guess the Opening — Zenthora</title>
+  <link rel="stylesheet" href="../css/style.css">
+  
+</head>
+<body>
+  <header>
+    <div class="wrap brand">
+      <img src="../assets/logo.png" alt="Zenthora logo">
+      <div><h1>Guess the Opening</h1><div class="tag">Zenthora • Dark</div></div>
+      <div class="actions" style="margin-left:auto"><a class="btn hollow" href="../index.html">← Back</a></div>
+    </div>
+  </header>
+  <div class="section">
+    
+  <p>Listen and guess (demo audio).</p>
+  <audio controls src="../opening-sample.mp3"></audio>
+  <div class="list" style="margin-top:10px">
+  <button class="btn">Reveal Answer (Demo)</button>
+  <div id="ans" class="row" style="display:none">Answer: “Blue Bird” — Naruto Shippuden (demo)</div>
+  </div>
+  <script>document.querySelector('button.btn').onclick=()=>{document.getElementById('ans').style.display='block'};</script>
+
+  </div>
+  <div class="footer">© 2025 Zenthora</div>
+</body>
+</html>

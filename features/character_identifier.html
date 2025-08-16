@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Character Identifier — Zenthora</title>
+  <link rel="stylesheet" href="../css/style.css">
+  
+</head>
+<body>
+  <header>
+    <div class="wrap brand">
+      <img src="../assets/logo.png" alt="Zenthora logo">
+      <div><h1>Character Identifier</h1><div class="tag">Zenthora • Dark</div></div>
+      <div class="actions" style="margin-left:auto"><a class="btn hollow" href="../index.html">← Back</a></div>
+    </div>
+  </header>
+  <div class="section">
+    
+  <p>Select an image (demo).</p>
+  <input id="file" type="file" accept="image/*">
+  <div id="preview" class="media">No image uploaded.</div>
+  <button id="identify" class="btn" style="margin-top:8px">Identify (Demo)</button>
+  <div id="result" class="list" style="margin-top:12px"></div>
+  <script>
+  const file=document.getElementById('file'), preview=document.getElementById('preview'), result=document.getElementById('result');
+  document.getElementById('identify').onclick=()=>{
+    if(!file.files[0]){alert('Choose an image first');return;}
+    preview.textContent='Processing...';
+    setTimeout(()=>{preview.textContent='Image loaded (demo).';result.innerHTML='<div class="row"><b>Guess:</b> Naruto Uzumaki</div><div class="row"><b>Confidence:</b> 82%</div>';},600);
+  };
+  </script>
+
+  </div>
+  <div class="footer">© 2025 Zenthora</div>
+</body>
+</html>

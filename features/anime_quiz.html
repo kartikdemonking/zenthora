@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Anime Quiz — Zenthora</title>
+  <link rel="stylesheet" href="../css/style.css">
+  
+</head>
+<body>
+  <header>
+    <div class="wrap brand">
+      <img src="../assets/logo.png" alt="Zenthora logo">
+      <div><h1>Anime Quiz</h1><div class="tag">Zenthora • Dark</div></div>
+      <div class="actions" style="margin-left:auto"><a class="btn hollow" href="../index.html">← Back</a></div>
+    </div>
+  </header>
+  <div class="section">
+    
+  <div class="list" id="qz"></div>
+  <button id="submit" class="btn" style="margin-top:8px">Submit</button>
+  <div id="score" class="row" style="display:none;margin-top:10px"></div>
+  <script>
+  const qs=[{q:"Who is the Pirate King?",a:["Luffy","Roger","Shanks"],c:1},{q:"Sharingan belongs to which clan?",a:["Uchiha","Hyuga","Aburame"],c:0}];
+  const qz=document.getElementById('qz');
+  qz.innerHTML=qs.map((x,i)=>'<div class="row"><b>'+x.q+'</b><br>'+x.a.map((o,j)=>'<label><input type=radio name=q'+i+' value='+j+'> '+o+'</label>').join('<br>')+'</div>').join('');
+  document.getElementById('submit').onclick=()=>{let sc=0;qs.forEach((x,i)=>{const sel=document.querySelector('input[name=q'+i+']:checked');if(sel&&+sel.value===x.c)sc++;});const s=document.getElementById('score');s.style.display='block';s.textContent='Score: '+sc+' / '+qs.length;};
+  </script>
+
+  </div>
+  <div class="footer">© 2025 Zenthora</div>
+</body>
+</html>

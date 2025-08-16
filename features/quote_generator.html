@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quote Generator — Zenthora</title>
+  <link rel="stylesheet" href="../css/style.css">
+  
+</head>
+<body>
+  <header>
+    <div class="wrap brand">
+      <img src="../assets/logo.png" alt="Zenthora logo">
+      <div><h1>Quote Generator</h1><div class="tag">Zenthora • Dark</div></div>
+      <div class="actions" style="margin-left:auto"><a class="btn hollow" href="../index.html">← Back</a></div>
+    </div>
+  </header>
+  <div class="section">
+    
+  <p>Tap to get a random anime quote.</p>
+  <button id="qbtn" class="btn">New Quote</button>
+  <div id="quote" class="list" style="margin-top:12px"></div>
+  <script>
+  const quotes=[
+    {text:"People’s lives don’t end when they die, it ends when they lose faith.",by:"Itachi"},
+    {text:"Power comes in response to a need, not a desire.",by:"Goku"},
+    {text:"Whatever you lose, you’ll find it again.",by:"Kenshin"}
+  ];
+  const el=document.getElementById('quote');
+  document.getElementById('qbtn').onclick=()=>{const q=quotes[Math.floor(Math.random()*quotes.length)];el.innerHTML='<div class="row"><b>“'+q.text+'”</b><br><small>— '+q.by+'</small></div>';};
+  </script>
+
+  </div>
+  <div class="footer">© 2025 Zenthora</div>
+</body>
+</html>

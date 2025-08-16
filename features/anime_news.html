@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Anime News — Zenthora</title>
+  <link rel="stylesheet" href="../css/style.css">
+  
+</head>
+<body>
+  <header>
+    <div class="wrap brand">
+      <img src="../assets/logo.png" alt="Zenthora logo">
+      <div><h1>Anime News</h1><div class="tag">Zenthora • Dark</div></div>
+      <div class="actions" style="margin-left:auto"><a class="btn hollow" href="../index.html">← Back</a></div>
+    </div>
+  </header>
+  <div class="section">
+    
+  <p>This is an offline demo reader. Replace with live API later.</p>
+  <div id="news" class="list"></div>
+  <script>
+  const news=[{t:"New movie announced!",d:"A top shonen series gets a 2025 film."},{t:"Season 2 confirmed",d:"Fan-favorite show returns next fall."}];
+  document.getElementById('news').innerHTML=news.map(n=>'<div class="row"><b>'+n.t+'</b><br><small>'+n.d+'</small></div>').join('');
+  </script>
+
+  </div>
+  <div class="footer">© 2025 Zenthora</div>
+</body>
+</html>
